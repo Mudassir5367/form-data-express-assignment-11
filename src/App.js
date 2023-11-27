@@ -60,24 +60,6 @@ function App() {
         <button>Submit</button>
       </form>
       <br />
-      {arrData.map((data) => {
-        return (
-          <>
-            <table border = '1'>
-              <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Email</th>
-              </tr>
-              <tr key={data.id}>
-                <td>{data.name}</td>
-                <td>{data.age}</td>
-                <td>{data.email}</td>
-              </tr>
-            </table>
-          </>
-        );
-      })}
     </>
   );
 }
