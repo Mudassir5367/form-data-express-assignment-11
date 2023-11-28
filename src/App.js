@@ -32,7 +32,7 @@ function App() {
   };
   return (
     <>
-      <form onSubmit={submitData} action='/data' method='post'>
+      <form onSubmit={submitData}  method='post'>
         <br />
         <br />
         <input
