@@ -1,14 +1,19 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const port = 5000
 
+const arr = []; 
 app.use(express.json())
+app.use(cors())
  app.get('/',(req,res)=>{
-    res.sendFile(__dirname,'../src/App.js')
+    res.send(arr)
  })
 
- app.post('/data',(req,res)=>{
-    res.send(req.body)
+ app.post('/form',(req,res)=>{
+    res.send('form')
+    console.log(req.body)
+    arr.push(req.body)
  })
 
  app.listen(port,()=>{
