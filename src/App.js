@@ -12,7 +12,8 @@ function App() {
   const [arrData, setArrData] = useState([]);
 
   const changeInput = (e) => {
-    const {name, val} = e.target.name;
+    const name = e.target.name;
+    const val = e.target.value;
     console.log(name, val);
     setUserData({ ...userData, [name]: val });
   };
@@ -69,3 +70,4 @@ function App() {
 }
 
 export default App;
+
